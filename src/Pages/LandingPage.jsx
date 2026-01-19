@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden pb-[40vh]"
+      className="relative h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden pb-[40vh]"
     >
       {/* background effect (lightweight) */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.04),transparent_60%)]" />
@@ -74,13 +74,26 @@ export default function HeroSection() {
               <li>Driven by simplicity, scalability, and user experience.</li>
             </ol>
 
-            <Button
+            {/* <Button
               as="a"
               href="#projects"
               className="bg-rose-400/80 hover:bg-rose-400 text-white px-5 py-2 text-sm font-medium w-fit transition-all duration-300 hover:scale-105"
             >
               View Projects
-            </Button>
+            </Button> */}
+            <Button
+                          className="bg-rose-400/80 hover:bg-rose-400 text-white px-5 py-2 text-sm font-medium w-fit transition-all duration-300 hover:scale-105 cursor-pointer"
+
+  onClick={() => {
+    const section = document.getElementById("projects");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  View Projects
+</Button>
+
           </motion.div>
         </div>
       </Container>
