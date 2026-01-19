@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden"
+      className="relative min-h-[100dvh] bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden"
     >
       {/* background effect (lightweight) */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.04),transparent_60%)]" />
