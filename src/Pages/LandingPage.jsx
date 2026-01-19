@@ -39,7 +39,7 @@ export default function HeroSection() {
         <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center md:items-end justify-between gap-6">
           {/* Text Content */}
           <motion.div
-            className="flex flex-col gap-4 md:w-6/12 lg:w-5/12"
+            className="flex flex-col gap-2 md:w-6/12 lg:w-5/12"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
