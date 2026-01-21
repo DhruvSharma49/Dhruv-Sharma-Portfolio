@@ -25,12 +25,11 @@ export default function HeroSection() {
     delaySpeed: 1200,
   });
 
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
     <section
       id="home"
-      className="relative min-h-screen lg:h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden pb-[28vh] sm:pb-[32vh md:pb-0"
+      className="relative min-h-screen lg:h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden pb-[16rem] lg:pb-0"
     >
       {/* background effect (lightweight) */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.04),transparent_60%)]" />
@@ -49,16 +48,17 @@ export default function HeroSection() {
               Hi, I’m <span className="text-amber-200">Dhruv Sharma</span>
             </h1>
 
-            <div className="min-h-[2.2rem] sm:min-h-[4.5rem]">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-rose-300 to-amber-200">
-                {mounted && (
-                  <>
-                    {text}
-                    <Cursor cursorStyle="|" />
-                  </>
-                )}
-              </p>
-            </div>
+       <div>
+  <p className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-rose-300 to-amber-200">
+    {mounted && (
+      <>
+        {text}
+        <Cursor cursorStyle="|" />
+      </>
+    )}
+  </p>
+</div>
+
 
             <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-lg leading-relaxed">
               Passionate about web development, I craft modern and scalable
