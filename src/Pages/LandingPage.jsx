@@ -30,15 +30,13 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen lg:h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden pb-0 md:pb-0
-"
+      className="relative min-h-screen lg:h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden pb-[28vh] sm:pb-[32vh md:pb-0"
     >
       {/* background effect (lightweight) */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.04),transparent_60%)]" />
 
       <Container className="relative z-20 pt-32 lg:pt-40 px-6 lg:px-16">
-        <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-start md:items-end
- justify-between gap-6">
+        <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center md:items-end justify-between gap-6">
           {/* Text Content */}
           <motion.div
             className="flex flex-col gap-2 md:w-6/12 lg:w-5/12"
@@ -101,8 +99,7 @@ export default function HeroSection() {
       </Container>
 
       {/* LCP IMAGE — OUTSIDE FRAMER MOTION */}
-<div className="relative md:absolute inset-x-0 md:bottom-0 z-10 pointer-events-none">
-
+      <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none">
         <div className="mx-auto max-w-[1200px] relative flex justify-end pr-6 lg:pr-16">
           <img
             src={ProfilePicture}
