@@ -263,15 +263,14 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-[100svh] bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-neutral-600 via-neutral-950 to-neutral-950 text-white overflow-hidden"
     >
-      {/* background effect */}
+      {/* background effect (lightweight) */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.04),transparent_60%)]" />
 
       <Container className="relative z-20 pt-32 lg:pt-40 px-6 lg:px-16">
         <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center md:items-end justify-between gap-6">
-          
-          {/* TEXT */}
+          {/* Text Content */}
           <motion.div
             className="flex flex-col gap-2 md:w-6/12 lg:w-5/12"
             initial={{ opacity: 0, x: -30 }}
@@ -279,11 +278,21 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h1 className="text-4xl sm:text-5xl font-bold uppercase tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-rose-400 to-amber-300">
+            <motion.h1
+              className="text-4xl sm:text-5xl font-bold uppercase tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-rose-400 to-amber-300"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               Hi, I’m <span className="text-amber-200">Dhruv Sharma</span>
-            </h1>
+            </motion.h1>
 
-            <div className="min-h-[2.2rem] sm:min-h-[4.5rem]">
+            <motion.div
+              className="min-h-[2.2rem] sm:min-h-[4.5rem]"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <p className="text-2xl sm:text-3xl md:text-4xl font-semibold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-rose-300 to-amber-200">
                 {mounted && (
                   <>
@@ -292,41 +301,57 @@ export default function HeroSection() {
                   </>
                 )}
               </p>
-            </div>
+            </motion.div>
 
-            <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-lg leading-relaxed">
+            <motion.p
+              className="text-white/70 text-sm sm:text-base md:text-lg max-w-lg leading-relaxed"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               Passionate about web development, I craft modern and scalable
               digital experiences combining{" "}
               <span className="text-rose-200 font-medium">clean design</span>{" "}
               with{" "}
-              <span className="text-amber-200 font-medium">solid logic</span>.
-              I focus on usability, performance, and maintainable code.
-            </p>
+              <span className="text-amber-200 font-medium">solid logic</span>. I
+              focus on usability, performance, and maintainable code.
+            </motion.p>
 
-            <ol className="text-white/80 list-decimal list-inside space-y-2 ml-2">
+            <motion.ol
+              className="text-white/80 list-decimal list-inside space-y-2 ml-2"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               <li>Focused on clean code, modern UI, and real-world performance.</li>
               <li>Driven by simplicity, scalability, and user experience.</li>
-            </ol>
+            </motion.ol>
 
-            <Button
-              className="bg-rose-400/80 hover:bg-rose-400 text-white px-5 py-2 text-sm font-medium w-fit transition-all duration-300 hover:scale-105 cursor-pointer"
-              onClick={() => {
-                const section = document.getElementById("projects");
-                if (section) {
-                  section.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.0 }}
             >
-              View Projects
-            </Button>
+              <Button
+                className="bg-rose-400/80 hover:bg-rose-400 text-white px-5 py-2 text-sm font-medium w-fit transition-all duration-300 hover:scale-105 cursor-pointer"
+                onClick={() => {
+                  const section = document.getElementById("projects");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                View Projects
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </Container>
 
-      {/* IMAGE — FIXED BOTTOM */}
-      <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none leading-none">
+      {/* LCP IMAGE — FIXED AT BOTTOM */}
+      <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none">
         <div className="mx-auto max-w-[1200px] relative flex justify-end pr-6 lg:pr-16">
-          <img
+          <motion.img
             src={ProfilePicture}
             alt="Dhruv Sharma"
             loading="eager"
@@ -334,7 +359,11 @@ export default function HeroSection() {
             decoding="async"
             width="600"
             height="800"
-            className="block h-[38vh] sm:h-[50vh] md:h-[60vh] lg:h-[75vh] xl:h-[85vh] w-auto object-contain select-none"
+            className="h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[70vh] xl:h-[80vh] w-auto object-contain select-none"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            whileHover={{ scale: 1.02 }}
           />
         </div>
       </div>

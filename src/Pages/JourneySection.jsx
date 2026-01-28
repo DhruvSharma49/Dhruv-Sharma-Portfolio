@@ -57,7 +57,7 @@ const education = [
   },
   {
     title: "Diploma in Information Technology",
-    institution: "DICE Academy",
+    institution: "Lal Bahadur Shastri Training Institute",
     duration: "1 Year Completed",
     description:
       "Completed foundational IT concepts and practical applications.",
