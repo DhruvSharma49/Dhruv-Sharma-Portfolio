@@ -8,6 +8,7 @@ import {
   FaAws,
   FaGithub,
   FaGitAlt,
+  FaFileUpload 
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -18,10 +19,12 @@ import {
   SiPostman,
   SiSocketdotio,
   SiAppwrite,
+  SiCloudinary
 } from "react-icons/si";
 import { BiNetworkChart } from "react-icons/bi";
 import { VscTerminal, VscVscode } from "react-icons/vsc";
 import { TbBrandNpm } from "react-icons/tb";
+
 
 const skills = [
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
@@ -37,7 +40,9 @@ const skills = [
   { name: "Socket.io", icon: <SiSocketdotio className="text-white" /> },
   { name: "AWS (Basics)", icon: <FaAws className="text-orange-400" /> },
   { name: "Oracle (Basics)", icon: <SiOracle className="text-red-500" /> },
-  { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
+  { name: "C++ (Basics)", icon: <SiCplusplus className="text-blue-500" /> },
+  { name: "Multer", icon: <FaFileUpload  className="text-orange-500" /> },
+  { name: "Cloudinary", icon: < SiCloudinary className="text-blue-500" /> },
 ];
 
 const tools = [

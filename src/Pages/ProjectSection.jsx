@@ -3,7 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Container from "../Components/Container";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Youtube from "../assets/projects/Youtube.webp";
+import Planify from "../assets/projects/Planify.webp";
 import Uber from "../assets/projects/Uber.webp";
+import Focal from "../assets/projects/Focal.webp";
 import blockwebsite from "../assets/projects/blockwebsite.webp";
 import AI from "../assets/projects/AI.webp";
 import APITesting from "../assets/projects/APITesting.webp";
@@ -16,13 +18,19 @@ const projects = [
     link: "https://github.com/DhruvSharma49/YouTube-Clone",
   },
   {
+    title: "Planify Project management tool",
+    description: "A modern and responsive project management platform that helps teams streamline task management, organize projects efficiently, track progress in real time, and enhance team collaboration through an intuitive user interface.",
+    image: Planify,
+    link: "https://github.com/DhruvSharma49/Planify-PM-Tool",
+  },
+  {
     title: "Full Stack Ride Sharing Platform (Uber-Inspired)",
     description: "An Uber-inspired web interface focusing on ride booking flow, location-based UI structure, and user-friendly design for real-world transportation apps",
     image: Uber,
     link: "https://github.com/DhruvSharma49/Uber",
   },
   {
-    title: "Content Publishing Web App (Appwrite Powered)",
+    title: "BlockHive – Content & Ideas Hub (Appwrite Powered)",
     description: "A dynamic blog website designed for reading and publishing content, with a clean layout, structured posts, and smooth navigation for better readability.",
     image: blockwebsite,
     link: "https://github.com/DhruvSharma49/Blog-Website",
@@ -32,6 +40,12 @@ const projects = [
     description: "An AI-powered web app built using Vanilla JavaScript and external APIs, enabling real-time responses and interactive user input handling.",
     image: AI,
     link: "https://github.com/DhruvSharma49/AI-with-Vanilla-JS",
+  },
+  {
+    title: "Focal social media platform",
+    description: "A modern social media platform designed for seamless user interaction, featuring real-time post sharing, responsive design, engaging UI, and smooth user experience for connecting and communicating online.",
+    image: Focal,
+    link: "https://github.com/DhruvSharma49/Focal-Social-Media-PlatForm",
   },
   {
     title: "Web-Based API Testing Tool (Postman-Inspired)",
